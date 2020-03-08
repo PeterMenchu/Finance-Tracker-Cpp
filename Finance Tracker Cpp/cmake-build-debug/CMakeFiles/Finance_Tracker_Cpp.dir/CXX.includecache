@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/peter/Documents/Peter's Programs/Finance Tracker/Finance Tracker Cpp/Finance.cpp
+Finance.h
+/Users/peter/Documents/Peter's Programs/Finance Tracker/Finance Tracker Cpp/Finance.h
+
+/Users/peter/Documents/Peter's Programs/Finance Tracker/Finance Tracker Cpp/Finance.h
+iostream
+-
+
+/Users/peter/Documents/Peter's Programs/Finance Tracker/Finance Tracker Cpp/main.cpp
+Finance.h
+/Users/peter/Documents/Peter's Programs/Finance Tracker/Finance Tracker Cpp/Finance.h
+iostream
+-
+
