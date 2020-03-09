@@ -8,7 +8,7 @@ int main() {
     Finance account;
     bool inUse = true;
     int operation = 42;
-    double data = 0;
+    double input = 0;
     cout << "\n*----------------------------------------------------------*\n";
     cout << "Welcome to Finance Tracker. Select load account data or, if\n"
             "new, select add to account to begin tracking your expenses.\n"
@@ -32,10 +32,16 @@ int main() {
             account.printBalance();
         } else if (operation == 2){
             cout << "Enter amount to add to account (without commas): $";
-            cin >> data;
+            cin >> input;
+            account.add(input);
         } else if (operation == 3){
             cout << "Enter amount to subtract from account (without commas): $";
-            cin >> data;
+            cin >> input;
+            account.subtract(input);
+        } else if (operation == 4) {
+            account.save();
+        } else if (operation == 5){
+            account.load();
         } else { // exit
             cout << "Exiting Finance Tracker.\n";
             inUse = false;

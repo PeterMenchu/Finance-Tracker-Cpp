@@ -12,8 +12,8 @@ class Finance {
     public:
         Finance();
         void printBalance();
-        void add(int amount);
-        void subtract(int amount);
+        void add(double amount);
+        void subtract(double amount);
         void save();
         void load();
 };

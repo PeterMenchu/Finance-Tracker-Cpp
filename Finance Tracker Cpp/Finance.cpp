@@ -11,19 +11,21 @@ void Finance::printBalance() {
     cout << "Current account balance: $" << balance << endl;
 }
 
-void Finance::add(int amount) {
-
+void Finance::add(double amount) {
+    balance = balance + amount;
+    cout << "$" << amount << " added to account, current balance is $" << balance << endl;
 }
 
-void Finance::subtract(int amount) {
-
+void Finance::subtract(double amount) {
+    balance = balance - amount;
+    cout << "$" << amount << " subtracted from account, current balance is $" << balance << endl;
 }
 
 void Finance::save() {
-
+    cout << "In Progress.\n";
 }
 
 void Finance::load() {
-
+    cout << "In Progress.\n";
 }
 // Peter Menchu 2020
