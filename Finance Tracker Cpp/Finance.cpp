@@ -22,10 +22,25 @@ void Finance::subtract(double amount) {
 }
 
 void Finance::save() {
-    cout << "In Progress.\n";
+    string outName;
+    cout << "Enter save file name: ";
+    cin >> outName;
+    ofstream fout;
+    fout.open(outName);
+    fout << balance;
+    fout.close();
+    cout << "Account saved.\n";
 }
 
 void Finance::load() {
-    cout << "In Progress.\n";
+    string inName;
+    cout << "Enter input file name: ";
+    cin >> inName;
+    ifstream fin;
+    fin.open(inName);
+    fin >> balance;
+    //getline(fin, content);
+    fin.close();
+    cout << "Account loaded, $" << balance << " is your current balance. Ready for operations.\n";
 }
 // Peter Menchu 2020

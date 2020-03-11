@@ -3,6 +3,7 @@
 #ifndef FINANCE_TRACKER_CPP_FINANCE_H
 #define FINANCE_TRACKER_CPP_FINANCE_H
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
