@@ -20,9 +20,10 @@ int main() {
     cout << "\t1. View balance\n";
     cout << "\t2. Add to account\n";
     cout << "\t3. Subtract a payment or withdrawal from account\n";
-    cout << "\t4. Save current account status and activity log\n";
-    cout << "\t5. Load account data (includes balance and previous adds/subtracts.\n";
-    cout << "\t6. Exit\n";
+    cout << "\t4. View Activity Log\n";
+    cout << "\t5. Save current account status and activity log\n";
+    cout << "\t6. Load account data (includes balance and previous adds/subtracts)\n";
+    cout << "\t7. Exit\n";
     // Run functionality until user exits or enters invalid input.
     do {
         cout << "Enter operation number: ";
@@ -31,16 +32,21 @@ int main() {
         if (operation == 1){
             account.printBalance();
         } else if (operation == 2){
-            cout << "Enter amount to add to account (without commas): $";
+            cout << "Enter amount to add to account (without commas, example: 12000.50): $";
             cin >> input;
+            cin.ignore();
             account.add(input);
         } else if (operation == 3){
             cout << "Enter amount to subtract from account (without commas): $";
             cin >> input;
+            cin.ignore();
             account.subtract(input);
-        } else if (operation == 4) {
+        } else if (operation == 4){
+            account.log();
+        }
+        else if (operation == 5) {
             account.save();
-        } else if (operation == 5){
+        } else if (operation == 6){
             account.load();
         } else { // exit
             cout << "Exiting Finance Tracker.\n";
