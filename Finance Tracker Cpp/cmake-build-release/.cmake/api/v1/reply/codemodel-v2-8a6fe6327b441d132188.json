@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Finance_Tracker_Cpp",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Finance_Tracker_Cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Finance_Tracker_Cpp-Release-39579c185056046ead6f.json",
+					"name" : "Finance_Tracker_Cpp",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/jam/OneDrive/Documents/Projects/FinC/Finance-Tracker-Cpp/Finance Tracker Cpp/cmake-build-release",
+		"source" : "C:/Users/jam/OneDrive/Documents/Projects/FinC/Finance-Tracker-Cpp/Finance Tracker Cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

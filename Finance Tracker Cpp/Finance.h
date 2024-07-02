@@ -5,14 +5,15 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+//#include <cstring>
 using namespace std;
 
 class Finance {
     private:
         double balance;
         int opCount;
-        double transLog[1000];
-        string activityLog[1000];
+        double transLog[10000];
+        string activityLog[10000];
     public:
         Finance();
         void printBalance();

@@ -15,18 +15,19 @@ void Finance::printBalance() {
 void Finance::add(double amount) {
     balance = balance + amount;
     opCount++;
-    cout << "Enter a note for this translation: ";
+    cout << "Enter a note for this transaction: ";
     getline(cin, activityLog[opCount]);
     transLog[opCount] = amount;
     cout << "$" << amount << " added to account, current balance is $" << balance << endl;
+    cout << "Transaction note: \"" << activityLog[opCount] << "\"" << endl;
 }
 
 void Finance::subtract(double amount) {
     balance = balance - amount;
     opCount++;
-    cout << "Enter a note for this translation: ";
+    cout << "Enter a note for this transaction:";
     getline(cin, activityLog[opCount]);
-    transLog[opCount] = amount;
+    transLog[opCount] = -1*amount;
     cout << "$" << amount << " subtracted from account, current balance is $" << balance << endl;
 }
 
@@ -51,7 +52,7 @@ void Finance::save() {
     fout << balance << endl;
     fout << opCount << endl;
     if (opCount > 0) {
-        for (int i = 1; i < opCount; i++) {
+        for (int i = 1; i <= opCount; i++) {
             fout << transLog[i] << endl;
             fout << activityLog[i] << endl;
         }
@@ -62,6 +63,9 @@ void Finance::save() {
 
 void Finance::load() {
     string inName;
+    string activityIn;
+    string transIn;
+    int tempTransVal;
     cout << "Enter input file name: ";
     cin >> inName;
     ifstream fin;
@@ -71,11 +75,18 @@ void Finance::load() {
     if (opCount == NULL){
         opCount == 0;
     }
-    for (int i = 0; i < opCount; i++){
+    for (int i = 1; i <= opCount; i++){
+        //getline(fin, transIn);
         fin >> transLog[i];
-        fin >> activityLog[i];
+        // grab the new line \n...
+        getline(fin,transIn);
+        getline(fin, activityIn);
+
+        activityLog[i] = activityIn;
+        cout << "logged " << transLog[i] << endl;
+        cout << "charted " << activityLog[i] << endl;
     }
-    //getline(fin, content);
+
     fin.close();
     cout << "Account loaded, $" << balance << " is your current balance. Ready for operations.\n";
 }

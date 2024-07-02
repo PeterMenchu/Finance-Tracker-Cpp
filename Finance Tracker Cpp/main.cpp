@@ -9,6 +9,7 @@ int main() {
     bool inUse = true;
     int operation = 42;
     double input = 0;
+    int exitFlag;
     cout << "\n*----------------------------------------------------------*\n";
     cout << "Welcome to Finance Tracker. Select load account data or, if\n"
             "new, select add to account to begin tracking your expenses.\n"
@@ -26,7 +27,7 @@ int main() {
     cout << "\t7. Exit\n";
     // Run functionality until user exits or enters invalid input.
     do {
-        cout << "Enter operation number: ";
+        cout << "Enter operation number:";
         // read user selection
         cin >> operation;
         if (operation == 1){
@@ -49,8 +50,13 @@ int main() {
         } else if (operation == 6){
             account.load();
         } else { // exit
-            cout << "Exiting Finance Tracker.\n";
-            inUse = false;
+            cout << "Do you want to exit? Make sure files are saved.\n";
+            cout << "1. Yes 2. No\n";
+            cin >> exitFlag;
+            if (exitFlag == 1) {
+                inUse = false;
+            }
+
         }
     } while (inUse);
     cout << "*----------------------------------------------------------*\n";

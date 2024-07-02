@@ -1,0 +1,3 @@
+C:\Users\jam\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\Finance_Tracker_Cpp.dir/objects.a
+C:\Users\jam\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc CMakeFiles\Finance_Tracker_Cpp.dir/objects.a @CMakeFiles\Finance_Tracker_Cpp.dir\objects1.rsp
+C:\Users\jam\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles\Finance_Tracker_Cpp.dir/objects.a -Wl,--no-whole-archive -o Finance_Tracker_Cpp.exe -Wl,--out-implib,libFinance_Tracker_Cpp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Finance_Tracker_Cpp.dir\linkLibs.rsp
